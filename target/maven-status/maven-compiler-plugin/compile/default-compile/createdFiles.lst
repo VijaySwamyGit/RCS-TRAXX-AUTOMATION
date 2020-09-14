@@ -1,0 +1,7 @@
+com\qa\rcs\traxx\WebPages\HomePage.class
+com\qa\rcs\traxx\AutomationBase\TestBase.class
+com\qa\rcs\traxx\ExcelUtilities\ExcelUtilities.class
+com\qa\rcs\traxx\AutomationUtils\TestUtil.class
+com\qa\rcs\traxx\WebPages\CreatePR_Page.class
+com\qa\rcs\traxx\WebPages\CreatePurChaseRequest_Page.class
+com\qa\rcs\traxx\WebPages\LoginPage.class
