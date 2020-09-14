@@ -9,6 +9,7 @@ import com.qa.rcs.traxx.WebPages.LoginPage;
 public class LoginTS extends TestBase {
 	
 	LoginPage lp; 
+	
 	//CONSTRUCTOR STARTS ADDED from Git Repo
 	public LoginTS()
 	{
