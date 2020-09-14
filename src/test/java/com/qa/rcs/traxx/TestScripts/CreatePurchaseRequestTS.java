@@ -14,10 +14,12 @@ public class CreatePurchaseRequestTS extends TestBase {
 	CreatePR_Page createPRPage;
 	HomePage homePage;
 	
+	//CONSTRUCTOR STARTS
 	public CreatePurchaseRequestTS()
 	{
 		PageFactory.initElements(driver, this);
 	}
+	//CONSTRUCTOR ENDS
 		
 		@Test
 		public void createPurchaseRequestTestCase()
