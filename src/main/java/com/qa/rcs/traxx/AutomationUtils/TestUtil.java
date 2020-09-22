@@ -1,17 +1,12 @@
 package com.qa.rcs.traxx.AutomationUtils;
 
-import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -22,9 +17,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.rcs.traxx.AutomationBase.TestBase;
 import com.qa.rcs.traxx.ExcelUtilities.ExcelUtilities;
+import com.sun.corba.se.spi.activation.Locator;
 //import com.qa.vidalhealth.Pages.HomePage;
 //import com.qa.vidalhealth.Pages.HomePage3;
 //import com.qa.vidalhealth.Pages.LoginPage;
@@ -33,7 +31,7 @@ public class TestUtil extends TestBase {
 	
 	//String parentWindow1 = driver.getWindowHandle();
 	
-	public static long PAGE_LOAD_TIMEOUT=35;//Used in TestBase class to define page_load_timeout
+	public static long PAGE_LOAD_TIMEOUT=45;//Used in TestBase class to define page_load_timeout
 	public static long IMPLICITLY_WAIT=35;//Used in TestBase class to define Implicit wait
 	static int assignIconIndex=1;
 	
@@ -93,13 +91,15 @@ ExcelUtilities excelUtilities;
 			    }
 
 
-		public static void handleAcceptAlert() 
+		public static String handleAcceptAlert() 
 		{
 
-			TestUtil.delayToSync();		
+			TestUtil.delayToSync();	
+			TestUtil.delayToSync();
 			String popUpstr = driver.switchTo().alert().getText();
 			System.out.println("popUpstr--"+popUpstr);
-			driver.switchTo().alert().accept();		
+			driver.switchTo().alert().accept();	
+			return popUpstr;
 		}
 		
        public void handleDismissAlert() 
@@ -114,7 +114,7 @@ ExcelUtilities excelUtilities;
        public static void delayToSync()
        {
     	   try {
-    		   		Thread.sleep(1500);
+    		   		Thread.sleep(3000);
     	   	   }catch (InterruptedException e) {
     	   		   									e.printStackTrace();
     	   	   									}
@@ -358,6 +358,26 @@ ExcelUtilities excelUtilities;
 			}
 		}
 		//
+		
+		//Explicit wait method-visibilityOf starts
+		
+		public static void sendKeysVisibilityOf(WebDriver driver, WebElement element,int timeout,String value)
+		{
+			new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(element));
+			element.sendKeys(value);
+		}
+		
+		//Explicit wait method-visibilityOf ends
+		
+		//Explicit wait method-elementToBeClickable starts
+		
+		public static void elementToBeClickable(WebDriver driver, WebElement element,int timeout)
+		{
+			new WebDriverWait(driver,timeout).until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		}
+		
+		//Explicit wait method-elementToBeClickable ends
 		
 		
        

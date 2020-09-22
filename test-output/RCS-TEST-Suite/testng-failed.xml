@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RCS-TEST-Suite]">
+  <test thread-count="5" name="RCS TEST CASES(failed)">
+    <classes>
+      <class name="com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS">
+        <methods>
+          <include name="createPurchaseRequestTestCase"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS -->
+    </classes>
+  </test> <!-- RCS TEST CASES(failed) -->
+</suite> <!-- Failed suite [RCS-TEST-Suite] -->

@@ -4,8 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 import com.qa.rcs.traxx.AutomationBase.TestBase;
+import com.qa.rcs.traxx.AutomationUtils.TestUtil;
 
 public class CreatePurChaseRequest_Page extends TestBase{
 	
@@ -49,12 +52,16 @@ public class CreatePurChaseRequest_Page extends TestBase{
 	
 	public void CreatePurChaseRequest()
 	{
+		String directPRScreen="";
 		Select entity = new Select(entityDD);
-		entity.selectByVisibleText("RCS");	
+		entity.selectByIndex(1);
 		Select city = new Select(cityDD);
 		city.selectByVisibleText("Bangalore");	
+		
+		TestUtil.delayToSync();
 		Select site = new Select(siteDD);
 		site.selectByIndex(3);	
+		
 		Select costCenter = new Select(costCenterDD);
 		costCenter.selectByVisibleText("common division");
 		Select requestedBy = new Select(requestedByDD);
@@ -72,8 +79,15 @@ public class CreatePurChaseRequest_Page extends TestBase{
 		Select budjetStatus = new Select(budjetStatusDD);
 		budjetStatus.selectByVisibleText("Budgeted");	
 		Select postFact = new Select(postFactDD);
-		postFact.selectByVisibleText("Yes");	
+		postFact.selectByVisibleText("Yes");
+		//
+		TestUtil.elementToBeClickable(driver, saveAsDraftButton, 40);
+		//
 		//saveAsDraftButton.click();
+		String draftPRSuccessMsg = TestUtil.handleAcceptAlert();
+		draftPRSuccessMsg=draftPRSuccessMsg.replaceAll("[0-9]", "");;
+		Assert.assertEquals(draftPRSuccessMsg, "Your details are saved under Draft number - DRAFT-");
+		Reporter.log("CreatePurChaseRequest TESTCASE is PASSED--",true);
 	}
 
 }

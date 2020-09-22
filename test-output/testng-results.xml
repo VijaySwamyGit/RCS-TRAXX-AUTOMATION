@@ -4,31 +4,33 @@
     <line>
       <![CDATA[Login TestCase Pass---]]>
     </line>
+    <line>
+      <![CDATA[CreatePurChaseRequest TESTCASE is PASSED--]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60112" started-at="2020-09-14T06:41:11Z" finished-at="2020-09-14T06:42:12Z">
+  <suite name="Default suite" duration-ms="78127" started-at="2020-09-22T06:55:51Z" finished-at="2020-09-22T06:57:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60112" started-at="2020-09-14T06:41:11Z" finished-at="2020-09-14T06:42:12Z">
+    <test name="Default test" duration-ms="78127" started-at="2020-09-22T06:55:51Z" finished-at="2020-09-22T06:57:09Z">
       <class name="com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@69a3d1d]" name="initialization" is-config="true" duration-ms="46627" started-at="2020-09-14T06:41:11Z" finished-at="2020-09-14T06:41:58Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@6ee52dcd]" name="initialization" is-config="true" duration-ms="38485" started-at="2020-09-22T06:55:51Z" finished-at="2020-09-22T06:56:29Z">
           <reporter-output>
             <line>
               <![CDATA[Login TestCase Pass---]]>
             </line>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="createPurchaseRequestTestCase()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@69a3d1d]" name="createPurchaseRequestTestCase" duration-ms="12409" started-at="2020-09-14T06:41:58Z" finished-at="2020-09-14T06:42:11Z">
+        <test-method status="PASS" signature="createPurchaseRequestTestCase()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@6ee52dcd]" name="createPurchaseRequestTestCase" duration-ms="32261" started-at="2020-09-22T06:56:29Z" finished-at="2020-09-22T06:57:02Z">
           <reporter-output>
+            <line>
+              <![CDATA[CreatePurChaseRequest TESTCASE is PASSED--]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createPurchaseRequestTestCase -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@69a3d1d]" name="teardown" is-config="true" duration-ms="1030" started-at="2020-09-14T06:42:11Z" finished-at="2020-09-14T06:42:12Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@6ee52dcd]" name="teardown" is-config="true" duration-ms="7338" started-at="2020-09-22T06:57:02Z" finished-at="2020-09-22T06:57:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="autoReport_MailTrigger()[pri:0, instance:com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS@69a3d1d]" name="autoReport_MailTrigger" is-config="true" duration-ms="1254" started-at="2020-09-14T06:42:12Z" finished-at="2020-09-14T06:42:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- autoReport_MailTrigger -->
       </class> <!-- com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

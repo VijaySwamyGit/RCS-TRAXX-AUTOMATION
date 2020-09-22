@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RCS-TEST-Suite">
+  <test name="RCS TEST CASES">
+    <classes>
+      <class name="com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS"/>
+      
+    </classes>
+  </test> <!-- RCS TEST CASES -->
+</suite> <!-- RCS-TEST-Suite -->

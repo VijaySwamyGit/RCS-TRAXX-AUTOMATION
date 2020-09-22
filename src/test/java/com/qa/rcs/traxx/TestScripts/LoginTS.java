@@ -19,8 +19,8 @@ public class LoginTS extends TestBase {
 	@Test
 	public void loginTestCase()
 	{
-		lp=new LoginPage();
-		lp.login();
+		//lp=new LoginPage();
+		//lp.login();
 	}
 
 }

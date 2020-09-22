@@ -5,7 +5,6 @@
     <classes>
       <class name="com.qa.rcs.traxx.TestScripts.CreatePurchaseRequestTS">
         <methods>
-          <include name="autoReport_MailTrigger"/>
           <include name="createPurchaseRequestTestCase"/>
           <include name="initialization"/>
           <include name="teardown"/>

@@ -40,11 +40,12 @@ public class LoginPage extends TestBase {
 	WebElement clickHereForVendorRegistrationLink;
 	
 	
-	public void login()
+	public void login(String un, String pwd)
 	{
 		String HomePageScreen="";
-		userNameTextField.sendKeys("super");
-		passwordTextField.sendKeys("1");
+		userNameTextField.sendKeys(un);
+		passwordTextField.sendKeys(pwd);
+		TestUtil.delayToSync();
 		loginButton.click();
 		
 		String loginValidationMsg = hp.logoutLink.getText();
