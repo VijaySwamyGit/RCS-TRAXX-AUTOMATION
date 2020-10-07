@@ -92,7 +92,7 @@
 	
 	  
   
-  			<!-- 		Code to build Without running Test Cases START
+  			<!-- 		Code To build Without running Test Cases START
  -->		
 		 <build>
     <plugins>
